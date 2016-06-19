@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DevZH.Heroku.Utils
+namespace DevZH.Heroku.Utils.Database
 {
     public static class HerokuDatabaseExtensions
     {
@@ -17,7 +17,7 @@ namespace DevZH.Heroku.Utils
         /// <returns>A ConnectionString of Heroku Database.</returns>
         public static string GetConnectionStringFromDatabaseUrl(string databaseUrl, string connectionStringFormat = "Server={0};Port={1};Database={2};Username={3};Password={4}")
         {
-            if (string.IsNullOrEmpty(databaseUrl))
+            if (string.IsNullOrEmpty(databaseUrl) || string.IsNullOrEmpty(connectionStringFormat))
             {
                 return null;
             }
@@ -30,6 +30,14 @@ namespace DevZH.Heroku.Utils
             var port = url.Port;
             var databaseName = url.AbsolutePath.Remove(0, 1);
             return string.Format(connectionStringFormat, host, port, databaseName, userName, password);
+        }
+
+        /// <summary>
+        /// An Implement of extension method for <seealso cref="GetConnectionStringFromDatabaseUrl"/>
+        /// </summary>
+        public static string ToConnectionString(this string databaseUrl, string connectionStringFormat = "Server={0};Port={1};Database={2};Username={3};Password={4}")
+        {
+            return GetConnectionStringFromDatabaseUrl(databaseUrl, connectionStringFormat);
         }
     }
 }
