@@ -1,0 +1,26 @@
+﻿{
+  "authors": [ "杜晓宇" ],
+  "version": "1.0.0-*",
+  "description": "Utils for Heroku",
+  "packOptions": {
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/noliar/DevZH.Heroku.Utils"
+    },
+    "tags": [
+      "Heroku",
+      "Utils"
+    ],
+    "projectUrl": "https://github.com/noliar/DevZH.Heroku.Utils",
+    "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0"
+  },
+
+  "dependencies": {
+    "NETStandard.Library": "1.5.0-rc2-24027"
+  },
+
+  "frameworks": {
+    "netstandard1.0": {
+    }
+  }
+}
