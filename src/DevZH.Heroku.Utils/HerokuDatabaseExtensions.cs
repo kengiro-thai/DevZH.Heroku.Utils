@@ -17,6 +17,10 @@ namespace DevZH.Heroku.Utils
         /// <returns>A ConnectionString of Heroku Database.</returns>
         public static string GetConnectionStringFromDatabaseUrl(string databaseUrl, string connectionStringFormat = "Server={0};Port={1};Database={2};Username={3};Password={4}")
         {
+            if (string.IsNullOrEmpty(databaseUrl))
+            {
+                return null;
+            }
             var url = new Uri(databaseUrl);
             var databaseType = url.Scheme;
             var userInfo = url.UserInfo.Split(new[] {':'}, 2);
