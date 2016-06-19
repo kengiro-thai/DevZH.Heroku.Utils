@@ -11,6 +11,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{93F191D3-9
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DevZH.Heroku.Utils.Test", "test\DevZH.Heroku.Utils.Test\DevZH.Heroku.Utils.Test.xproj", "{3A5B7C95-07DE-4380-9B0C-8BB15821445D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{4CDF8A22-81D2-45D9-BA77-79A9EEB05D66}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+		LICENSE-2.0.txt = LICENSE-2.0.txt
+		NuGet.Config = NuGet.Config
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
