@@ -1,6 +1,6 @@
 ﻿{
   "authors": [ "杜晓宇" ],
-  "version": "1.0.1-*",
+  "version": "1.0.2-*",
   "description": "Utils for Heroku",
   "packOptions": {
     "repository": {
@@ -16,7 +16,7 @@
   },
 
   "dependencies": {
-    "NETStandard.Library": "1.5.0-rc2-24027"
+    "NETStandard.Library": "1.6.0"
   },
 
   "frameworks": {
